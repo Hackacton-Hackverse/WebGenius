@@ -28,9 +28,9 @@ Après le lancement de l'application, vous serez dirigé vers la page d'accueil.
 2. Ensuite, cliquez sur le bouton "Login".
 
 Vous pouvez vous connecter en tant qu'administrateur en utilisant les identifiants suivants :
-- Email: administrateur@gmail.com
-- Mot de passe: administrateur
-
+- Email: Admin@gmail.com
+- Mot de passe: Admin1234
+   
 Alternativement, vous pouvez vous connecter en tant qu'utilisateur en utilisant les identifiants suivants :
 - Email: user1@gmail.com
 - Mot de passe: userpassword1
@@ -38,8 +38,10 @@ Alternativement, vous pouvez vous connecter en tant qu'utilisateur en utilisant 
 ### PAGE D'ACCUEIL
 <img src="frontend/src/images/WelcomePage.png" alt=" Page Accueil">
 
+
 ### PAGE ADMINISTRATEUR
 <img src="frontend/src/images/AdminDashboard.png" alt="Interface Administrateur">
+
 
 ### PAGE UTILISATEUR
 <img src="frontend/src/images/UserDashboard.png" alt="Interface Utilisateur">
@@ -87,28 +89,19 @@ Alternativement, vous pouvez vous connecter en tant qu'utilisateur en utilisant 
   - yup: 1.0.0
 
 
-Voici les instructions mises à jour pour l'installation et le démarrage du projet :
-
 ### INSTALLATION
 1. Clonez le dépôt backend : git clone [lien du dépôt backend]
 2. Accédez au répertoire backend : cd [répertoire backend]
 3. Installez les dépendances du backend : npm install
-4. Configurez les variables d'environnement.
-5. Lancez le serveur backend : npm start
+4. Lancez le serveur backend : npm start
+5. Clonez le dépôt frontend : git clone [lien du dépôt frontend]
+6. Accédez au répertoire frontend : cd [répertoire frontend]
+7. Installez les dépendances du frontend : npm install
+8. Lancez l'application frontend : npm start
 
-6. Clonez le dépôt frontend : git clone [lien du dépôt frontend]
-7. Accédez au répertoire frontend : cd [répertoire frontend]
-8. Installez les dépendances du frontend : npm install
-9. Lancez l'application frontend : npm start
-
-Assurez-vous d'installer les dépendances au niveau de la racine du projet en exécutant également `npm install` à ce niveau. De plus, veillez à lancer le backend avant le frontend pour assurer une communication appropriée entre les deux parties du projet.
+NB: Assurez-vous d'installer les dépendances au niveau de la racine du projet en exécutant également `npm install` à ce niveau. De plus, veillez à lancer le backend avant le frontend pour assurer une communication appropriée entre les deux parties du projet.
 
 N'hésitez pas à remplacer `[lien du dépôt backend]`, `[répertoire backend]`, `[lien du dépôt frontend]` et `[répertoire frontend]` par les liens et les noms de répertoires spécifiques au projet.
 
-### CONFIGURATION
-Pour utiliser cette application, créez un fichier .env avec les variables suivantes : 
 
-PORT=9000
-DATABASE=VOTRE_URL_MONGO ( qui vous sera fourni personnellement)
-JWT_SECRET=fidbfbFCDSm1558
 
