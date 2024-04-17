@@ -88,6 +88,11 @@ Alternativement, vous pouvez vous connecter en tant qu'utilisateur en utilisant 
   - redux-thunk: 2.4.2
   - yup: 1.0.0
 
+### CONFIGURATION
+Creer un fichier .env dans le dossier backend et y inserer ces configurations 
+PORT  = 9000
+DATABASE = mongodb+srv://mbengivan63:yH8C02DEdSuzAqvy@job-portal-api.4sj9sja.mongodb.net/
+JWT_SECRET=fidbfbFCDSm1558. 
 
 ### INSTALLATION
 1. Clonez le dépôt backend : git clone [lien du dépôt backend]
