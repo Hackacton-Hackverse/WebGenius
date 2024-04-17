@@ -20,7 +20,7 @@ import {
     userReducerLogout,
     userReducerProfile,
     userReducerSignIn,
-    userReducerSignUp
+    userReducerSignUp,deleteUserReducer,loadUserReducer,updateUserReducer
 } from './reducers/userReducer';
 
 import { modeReducer } from './reducers/themeModeReducer';
@@ -33,14 +33,17 @@ const reducer = combineReducers({
     logOut: userReducerLogout,
     userProfile: userReducerProfile,
     singleJob: loadJobSingleReducer,
+    singleUser:loadUserReducer,
     userJobApplication: userApplyJobReducer,
     allUsers: allUserReducer,
     signUp: userReducerSignUp,
     mode: modeReducer,
     registerJob: registerAjobReducer,
     deleteJob: deleteJobReducer,
+    deleteUser: deleteUserReducer,
     createJobType: createJobTypeReducer,
-    updateJob: updateJobReducer
+    updateJob: updateJobReducer,
+    updateUser:updateUserReducer,
 
 });
 

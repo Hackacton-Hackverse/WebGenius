@@ -1,6 +1,7 @@
 import { Box, styled } from '@mui/material'
 import React from 'react'
-import headerImage from '../images/jobbg.jpg';
+//import headerImage from '../images/jobbg.jpg';
+import headerImage from '../images/Rectangle-1Best-Apps-to-Search-Jobs-in-India.webp';
 import SearchInputEl from './SearchInputEl';
 
 const Header = () => {

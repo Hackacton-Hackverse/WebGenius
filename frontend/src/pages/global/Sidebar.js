@@ -14,7 +14,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { userLogoutAction, userProfileAction } from '../../redux/actions/userAction';
 import { useNavigate } from 'react-router-dom';
 import LoginIcon from '@mui/icons-material/Login';
-
+import HomeIcon from '@mui/icons-material/Home';
+//import { FaHome } from 'react-icons/fa';
 
 const SidebarAdm = () => {
     const { userInfo } = useSelector(state => state.signIn);
@@ -91,6 +92,7 @@ const SidebarAdm = () => {
                                         <MenuItem component={<Link to="/admin/category" />} icon={<CategoryIcon />}> Category </MenuItem>
                                     </> :
                                     <>
+                                    <MenuItem component={<Link to="/" />} icon={<HomeIcon/>}> Home </MenuItem>
                                         <MenuItem component={<Link to="/user/dashboard" />} icon={<DashboardIcon />}> Dashboard </MenuItem>
                                         <MenuItem component={<Link to="/user/jobs" />} icon={<WorkHistoryIcon />}> Applied Jobs </MenuItem>
                                         <MenuItem component={<Link to="/user/info" />} icon={<Person3Icon />}> Personal Info </MenuItem>

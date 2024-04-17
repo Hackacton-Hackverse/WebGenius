@@ -80,7 +80,7 @@ const Navbar = () => {
                             textDecoration: 'none',
                         }}
                     >
-                        JOB PORTAL
+                        JOB FINDER
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -136,7 +136,7 @@ const Navbar = () => {
                             textDecoration: 'none',
                         }}
                     >
-                        JOB PORTAL
+                        JOB FINDER
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {/* menu desktop */}

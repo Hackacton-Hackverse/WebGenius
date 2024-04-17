@@ -18,24 +18,12 @@ import {
     USER_SIGNIN_SUCCESS,
     USER_SIGNUP_FAIL,
     USER_SIGNUP_REQUEST,
-    USER_SIGNUP_SUCCESS,
-
-
-    REGISTER_USER_REQUEST, 
-    REGISTER_USER_SUCCESS ,
-    REGISTER_USER_FAIL ,
-    REGISTER_USER_RESET ,
-    
+    USER_SIGNUP_SUCCESS,EDIT_USER_REQUEST,
+    EDIT_USER_SUCCESS,
+    EDIT_USER_FAIL,
     DELETE_USER_REQUEST ,
     DELETE_USER_SUCCESS ,
-    DELETE_USER_FAIL ,
-    DELETE_USER_RESET ,
-    
-    
-    EDIT_USER_REQUEST,
-    EDIT_USER_SUCCESS ,
-    EDIT_USER_FAIL ,
-    EDIT_USER_RESET
+    DELETE_USER_FAIL 
 
 } from '../constants/userConstant';
 
@@ -178,4 +166,40 @@ export const deleteUserAction = (user_id) => async (dispatch) => {
     }
 }
 
+// single user action
+export const userSingleAction = (id) => async (dispatch) => {
+    dispatch({ type: USER_LOAD_REQUEST });
+    try {
+        const { data } = await axios.get(`/api/user/${id}`); 
+        dispatch({
+            type: USER_LOAD_SUCCESS,
+            payload: data
+        });
+    } catch (error) {
+        dispatch({
+            type: USER_LOAD_FAIL,
+            payload: error.response.data.error
+        });
+    }
+}
 
+
+//edit single job action
+export const editSingleUserAction = (user) => async (dispatch) => {
+    dispatch({ type:EDIT_USER_REQUEST,
+});
+    try {
+        const { data } = await axios.put(`/api/user/edit/${user._id}`, user);
+        dispatch({
+            type: EDIT_USER_SUCCESS,
+            payload: data
+        });
+        toast.success("User updated successfully");
+    } catch (error) {
+        dispatch({
+            type: EDIT_USER_FAIL,
+            payload: error.response.data.error
+        });
+        toast.error(error.response.data.error);
+    }
+}

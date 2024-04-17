@@ -30,6 +30,7 @@ import { themeColors } from './theme'
 import { useSelector } from 'react-redux';
 import { useMemo } from 'react';
 import DashCreateUser from './pages/admin/DashCreateUser';
+import DashEditUser from './pages/admin/data/DashEditUser';
 
 //HOC
 const UserDashboardHOC = Layout(UserDashboard);
@@ -44,6 +45,7 @@ const DashCreateJobHOC = Layout(DashCreateJob)
 const DashCreateUserHOC = Layout(DashCreateUser)
 const DashCreateCategoryHOC = Layout(DashCreateCategory)
 const DashAdminEditJobHOC = Layout(DashEditJob);
+const DashAdminEditUserHOC = Layout(DashEditUser);
 
 
 
@@ -75,6 +77,7 @@ const App = () => {
                             <Route path='/admin/user/create' element={<AdminRoute><DashCreateUserHOC /></AdminRoute>} />
                             <Route path='/admin/job/create' element={<AdminRoute><DashCreateJobHOC /></AdminRoute>} />
                             <Route path='/admin/edit/job/:id' element={<AdminRoute><DashAdminEditJobHOC /></AdminRoute>} />
+                            <Route path='/admin/edit/user/:id' element={<AdminRoute><DashAdminEditUserHOC /></AdminRoute>} />
                             <Route path='/admin/category/create' element={<AdminRoute><DashCreateCategoryHOC /></AdminRoute>} />
                             <Route path='/user/dashboard' element={<UserRoute>< UserDashboardHOC /></UserRoute>} />
                             <Route path='/user/jobs' element={<UserRoute>< UserJobsHistoryHOC /></UserRoute>} />

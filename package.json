@@ -1,13 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "job portal",
+  "description": "JOB FINDER",
   "main": "app.js",
   "scripts": {
     "start": "node backend/app.js",
     "server": "nodemon backend/app.js"
   },
-  "author": "Emmann",
+  "author": "WebGenius",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

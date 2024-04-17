@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import AddIcon from '@mui/icons-material/Add';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment'
-import { allUserAction } from '../../redux/actions/userAction';
+import { allUserAction, deleteUserAction } from '../../redux/actions/userAction';
 
 const DashUsers = () => {
 
@@ -15,13 +15,28 @@ const DashUsers = () => {
         dispatch(allUserAction());
     }, []);
 
-
+/* 
     const { users, loading } = useSelector(state => state.allUsers);
     let data = [];
     data = (users !== undefined && users.length > 0) ? users : []
 
-    const deleteUserById = (e, id) => {
+   /* const deleteUserById = (e, id) => {
         console.log(id);
+    }*/
+
+    
+    const { success: deleteSuccess } = useSelector(state => state.deleteUser);
+    const {users} = useSelector(state => state.allUsers);
+    let data = [];
+    data = (users !== undefined && users.length > 0) ? users : []
+
+    const deleteUserById = (e, id) => {
+        if (window.confirm(`You really want to delete user ID: "${id}" ?`)) {
+            dispatch(deleteUserAction(id));
+            if (deleteSuccess && deleteSuccess === true) {
+                dispatch(allUserAction())
+            }
+        }
     }
 
     const columns = [
@@ -77,7 +92,7 @@ const DashUsers = () => {
                     All users
                 </Typography>
                 <Box sx={{ pb: 2, display: "flex", justifyContent: "right" }}>
-                    <Button variant='contained' color="success" startIcon={<AddIcon />} to="/admin/user/create"> Create user</Button>
+                    <Button variant='contained' color="success" startIcon={<AddIcon />} to={`/admin/user/create`}> Create user</Button>
                 </Box>
                 <Paper sx={{ bgcolor: "secondary.midNightBlue" }} >
 

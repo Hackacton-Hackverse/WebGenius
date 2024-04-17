@@ -21,7 +21,8 @@ import {
     USER_SIGNUP_FAIL,
     USER_SIGNUP_REQUEST,
     USER_SIGNUP_RESET,
-    USER_SIGNUP_SUCCESS
+    USER_SIGNUP_SUCCESS,DELETE_USER_RESET,DELETE_USER_FAIL,DELETE_USER_SUCCESS,DELETE_USER_REQUEST,EDIT_USER_REQUEST,EDIT_USER_SUCCESS,EDIT_USER_FAIL,
+    EDIT_USER_RESET
 } from "../constants/userConstant"
 
 
@@ -145,3 +146,75 @@ export const allUserReducer = (state = { users: [] }, action) => {
 
 }
 
+
+// delete user by id
+//delete user by id
+export const deleteUserReducer = (state = {}, action) => {
+    switch (action.type) {
+        case DELETE_USER_REQUEST:
+            return { loading: true }
+        case DELETE_USER_SUCCESS:
+            return {
+                loading: false,
+                success: action.payload.success,
+                message: action.payload.message
+            }
+        case DELETE_USER_FAIL:
+            return {
+                loading: false,
+                error: action.payload
+            }
+        case DELETE_USER_RESET:
+            return {}
+        default:
+            return state;
+    }
+}
+
+
+
+// single user reducer
+export const loadUserReducer = (state = { user: {} }, action) => {
+    switch (action.type) {
+        case USER_LOAD_REQUEST:
+            return { loading: true }
+        case USER_LOAD_SUCCESS:
+            return {
+
+                loading: false,
+                success: action.payload.success,
+                singleJob: action.payload.job,
+
+            }
+        case USER_LOAD_FAIL:
+            return { loading: false, error: action.payload }
+        case USER_LOAD_RESET:
+            return {}
+        default:
+            return state;
+    }
+
+}
+
+
+export const updateUserReducer = (state = {}, action) => {
+    switch (action.type) {
+        case EDIT_USER_REQUEST:
+            return { loading: true }
+        case EDIT_USER_SUCCESS:
+            return {
+                loading: false,
+                success: action.payload.success,
+                job: action.payload.job
+            }
+        case EDIT_USER_FAIL:
+            return {
+                loading: false,
+                error: action.payload
+            }
+        case EDIT_USER_RESET:
+            return {}
+        default:
+            return state;
+    }
+}
