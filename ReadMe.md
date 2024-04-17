@@ -5,12 +5,21 @@ JOB FINDER
 Une application web qui aide les utilisateurs à trouver des offres d'emploi correspondant à leurs compétences et à leurs intérêts. L'application offre une interface conviviale et des fonctionnalités avancées pour faciliter la recherche d'emploi.
 
 ## FONCTIONNALITES PRINCIPALES
-- Recherche d'offres d'emploi par mots-clés, emplacement ou catégorie.
-- Filtres avancés pour affiner les résultats de recherche.
-- Affichage des détails de chaque offre d'emploi, y compris la description, les compétences requises et les informations sur l'entreprise.
-- Possibilité de créer un profil utilisateur avec un CV et des préférences de recherche.
-- Alertes d'emploi personnalisées pour informer les utilisateurs des nouvelles offres correspondant à leurs critères.
-- Possibilité de postuler directement depuis l'application ou de sauvegarder des offres pour une consultation ultérieure.
+
+- Architecture logicielle : modèle MVC ;
+- Composant HOC (Higher-Order Component) ;
+- Mode sombre et mode clair avec MUI (Material UI) ;
+- Tableau de bord administrateur et utilisateur, pagination, Datagrid, téléchargement en CSV, etc. ;
+- Ouverture et fermeture de la barre latérale du tableau de bord ;
+- L'administrateur peut créer des emplois, créer des catégories, etc. ;
+- Analytique du tableau de bord ;
+- Application responsive / MUI: Material UI ;
+- L'utilisateur peut consulter son historique d'emplois dans le tableau de bord utilisateur ;
+- Formulaire de connexion et d'inscription avec Formik et Yup pour la validation ;
+- Système d'authentification moderne avec JWT et cookie ;
+- Recherche d'emplois, filtrage des emplois par catégorie et localisation ;
+- Postuler pour un emploi sur la page d'emploi unique si l'utilisateur est déjà connecté ;
+- Notifications Toast. 
 
 ## COMMENT CA MARCHE ?
 Après le lancement de l'application, vous serez dirigé vers la page d'accueil. Veuillez vous connecter en tant qu'administrateur ou utilisateur en suivant ces étapes :
@@ -35,11 +44,11 @@ Alternativement, vous pouvez vous connecter en tant qu'utilisateur en utilisant 
 ### PAGE UTILISATEUR
 <img src="frontend/src/images/UserDashboard.png" alt="Interface Utilisateur">
 
-## Technologies utilisées
+### TECHNOLOGIES UTILISEES
 
 **Backend:**
 - Framework: Express.js
-- Langages: JavaScript (version non spécifiée)
+- Langages: JavaScript: v21.6.1
 - Base de données: MongoDB
 - Outils de développement:
   - bcryptjs: 2.4.3
@@ -55,7 +64,7 @@ Alternativement, vous pouvez vous connecter en tant qu'utilisateur en utilisant 
 
 **Frontend:**
 - Framework: React.js
-- Langages: JavaScript (version non spécifiée)
+- Langages: JavaScript: v21.6.1
 - Outils de développement:
   - @emotion/react: 11.10.6
   - @emotion/styled: 11.10.6
@@ -78,37 +87,28 @@ Alternativement, vous pouvez vous connecter en tant qu'utilisateur en utilisant 
   - yup: 1.0.0
 
 
-## Installation
-1. Clonez ce dépôt : git clone [lien du dépôt]
-2. Installez les dépendances : npm install
-3. Configurez les variables d'environnement.
-4. Lancez l'application : npm start
+Voici les instructions mises à jour pour l'installation et le démarrage du projet :
 
-## Configuration
-Environnement requis : [Liste des dépendances logicielles requises]
+### INSTALLATION
+1. Clonez le dépôt backend : git clone [lien du dépôt backend]
+2. Accédez au répertoire backend : cd [répertoire backend]
+3. Installez les dépendances du backend : npm install
+4. Configurez les variables d'environnement.
+5. Lancez le serveur backend : npm start
 
-Variables d'environnement :
-- API_KEY : Clé d'API nécessaire pour accéder aux données d'emploi.
-- DATABASE_URL : URL de connexion à la base de données.
+6. Clonez le dépôt frontend : git clone [lien du dépôt frontend]
+7. Accédez au répertoire frontend : cd [répertoire frontend]
+8. Installez les dépendances du frontend : npm install
+9. Lancez l'application frontend : npm start
 
-## Documentation
-Pour obtenir une documentation détaillée de l'API ou du fonctionnement interne de l'application, veuillez consulter [lien vers la documentation].
+Assurez-vous d'installer les dépendances au niveau de la racine du projet en exécutant également `npm install` à ce niveau. De plus, veillez à lancer le backend avant le frontend pour assurer une communication appropriée entre les deux parties du projet.
 
-## Contributions
-Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes :
-1. Forkez le dépôt
-2. Créez une branche pour votre fonctionnalité : git checkout -b nom-de-la-fonctionnalité
-3. Effectuez les modifications nécessaires.
-4. Faites un commit de vos modifications : git commit -m "Description des modifications"
-5. Poussez vos modifications sur votre dépôt : git push origin nom-de-la-fonctionnalité
-6. Ouvrez une demande d'extraction sur la branche principale du projet.
+N'hésitez pas à remplacer `[lien du dépôt backend]`, `[répertoire backend]`, `[lien du dépôt frontend]` et `[répertoire frontend]` par les liens et les noms de répertoires spécifiques au projet.
 
-## Auteurs
-- [Votre nom]
-- [Autre contributeur 1]
-- [Autre contributeur 2]
+### CONFIGURATION
+Pour utiliser cette application, créez un fichier .env avec les variables suivantes : 
 
-## Licence
-Ce projet est sous licence [insérez la licence appropriée].
+PORT=9000
+DATABASE=VOTRE_URL_MONGO ( qui vous sera fourni personnellement)
+JWT_SECRET=fidbfbFCDSm1558
 
-N'hésitez pas à personnaliser ce modèle README en fonction des besoins spécifiques de votre application web "Get a Job". Assurez-vous de fournir des informations claires et concises pour faciliter la compréhension et l'utilisation de votre application par les utilisateurs et les développeurs.
