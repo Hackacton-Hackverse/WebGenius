@@ -33,7 +33,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd mern-chat-app
+  cd Swift-Chat/Swift-Chat
 ```
 
 Install dependencies
@@ -102,6 +102,3 @@ PORT = 5000
 MONGO_URI = mongodb+srv://user1:user1@chatapplication.0359a0h.mongodb.net/?retryWrites=true&w=majority&appName=ChatApplication
 JWT_SECRET=webgenius
 
-NB: Assurez-vous d'installer les dépendances au niveau de la racine du projet en exécutant également `npm install` à ce niveau. De plus, veillez à lancer le backend avant le frontend pour assurer une communication appropriée entre les deux parties du projet.
-
-N'hésitez pas à remplacer `[lien du dépôt backend]`, `[répertoire backend]`, `[lien du dépôt frontend]` et `[répertoire frontend]` par les liens et les noms de répertoires spécifiques au projet.
