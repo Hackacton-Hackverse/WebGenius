@@ -3,9 +3,21 @@
 .App {
   min-height: 100vh;
   display: flex;
-  background-image: url("./BackgroundUpdate.jpg");
+  position: relative;
+}
+
+.App::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./BACKGROUND_FINAL.jpg");
   background-position: center;
   background-size: cover;
+  filter: blur(5px);
+  z-index: -1;
 }
 
 ::-webkit-scrollbar {

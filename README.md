@@ -1,7 +1,12 @@
-# Swift-Chat
+## TITRE DE L'APPLICATION
 
-Swift-Chat is a Full Stack Chatting App.
-Uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database.
+SWIFT-CHAT
+
+## DESCRIPTION
+
+Swift-Chat est une application de chat complète qui permet aux utilisateurs de communiquer en temps réel. Elle offre une expérience de messagerie instantanée fluide grâce à l'utilisation de Socket.io, une bibliothèque populaire pour la communication en temps réel.
+L'application permet aux utilisateurs d'envoyer et de recevoir des messages instantanés, de créer des salles de discussion et d'interagir avec d'autres utilisateurs connectés. Elle garantit une communication rapide et efficace grâce à la technologie WebSocket fournie par Socket.io.
+Pour garantir la sécurité des utilisateurs, Swift-Chat stocke les mots de passe des utilisateurs de manière cryptée dans une base de données MongoDB. Cela signifie que ces informations personnelles sont protégées contre les accès non autorisés.
 
 ## Tech Stack
 
@@ -11,13 +16,13 @@ Uses Socket.io for real time communication and stores user details in encrypted 
 
 **Database:** Mongo DB
 
-## Demo
+## COMMENT CA MARCHE ?
 
 [https://Swift-Chat.herokuapp.com/](https://Swift-Chat-7fgq.onrender.com)
 
 ![](https://github.com/webgenius-eon/mern-chat-app/blob/master/screenshots/group%20%2B%20notif.PNG)
 
-## Run Locally
+## DEMARRER EN LOCAL
 
 Clone the project
 
@@ -56,41 +61,47 @@ Start the Client
   npm start
 ```
 
-# Features
+## FONCTIONNALITES PRINCIPALES
 
 ### Authenticaton
 
-![](https://github.com/webgenius-eon/mern-chat-app/blob/master/screenshots/login.PNG)
-![](https://github.com/webgenius-eon/mern-chat-app/blob/master/screenshots/signup.PNG)
+<img src="frontend/src/WelcomePage.png" alt=" Page Accueil">
 
 ### Real Time Chatting with Typing indicators
 
-![](https://github.com/webgenius-eon/mern-chat-app/blob/master/screenshots/real-time.PNG)
+<img src="frontend/src/Typing.png" alt=" Page Accueil">
 
 ### One to One chat
 
-![](https://github.com/webgenius-eon/mern-chat-app/blob/master/screenshots/mainscreen.PNG)
+<img src="frontend/src/One_To_One.png" alt=" Page Accueil">
 
 ### Search Users
 
-![](https://github.com/webgenius-eon/mern-chat-app/blob/master/screenshots/search.PNG)
+<img src="frontend/src/SearchPage.png" alt=" Page Accueil">
 
 ### Create Group Chats
 
-![](https://github.com/webgenius-eon/mern-chat-app/blob/master/screenshots/new%20grp.PNG)
+<img src="frontend/src/CreateGroup.png" alt=" Page Accueil">
 
 ### Notifications
 
-![](https://github.com/webgenius-eon/mern-chat-app/blob/master/screenshots/group%20%2B%20notif.PNG)
+<img src="frontend/src/Notification.png" alt=" Page Accueil">
 
 ### Add or Remove users from group
 
-![](https://github.com/webgenius-eon/mern-chat-app/blob/master/screenshots/add%20rem.PNG)
+<img src="frontend/src/addUpdateRemoveUser.png" alt=" Page Accueil">
 
 ### View Other user Profile
 
-![](https://github.com/webgenius-eon/mern-chat-app/blob/master/screenshots/profile.PNG)
+<img src="frontend/src/MyProfil.png" alt=" Page Accueil">
 
-## Made By
+### CONFIGURATION
 
-- [@webgenius-eon](https://github.com/webgenius-eon)
+Creer un fichier .env dans le dossier backend et y inserer ces configurations
+PORT = 5000
+MONGO_URI = mongodb+srv://user1:user1@chatapplication.0359a0h.mongodb.net/?retryWrites=true&w=majority&appName=ChatApplication
+JWT_SECRET=webgenius
+
+NB: Assurez-vous d'installer les dépendances au niveau de la racine du projet en exécutant également `npm install` à ce niveau. De plus, veillez à lancer le backend avant le frontend pour assurer une communication appropriée entre les deux parties du projet.
+
+N'hésitez pas à remplacer `[lien du dépôt backend]`, `[répertoire backend]`, `[lien du dépôt frontend]` et `[répertoire frontend]` par les liens et les noms de répertoires spécifiques au projet.
