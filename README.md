@@ -27,13 +27,13 @@ Pour garantir la sécurité des utilisateurs, Swift-Chat stocke les mots de pass
 Clone the project
 
 ```bash
-  git clone https://github.com/webgenius-eon/mern-chat-app
+git clone https://github.com/Hackacton-Hackverse/WebGenius.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd Swift-Chat
+  cd WebGenius-SWIFT_CHAT
 ```
 
 Install dependencies
