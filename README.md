@@ -63,7 +63,7 @@ Start the Client
 
 ## FONCTIONNALITES PRINCIPALES
 
-### Authenticaton
+### Authentication
 
 <img src="frontend/src/WelcomePage.png" alt=" Page Accueil">
 
