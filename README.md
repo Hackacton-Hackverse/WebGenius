@@ -101,4 +101,5 @@ Creer un fichier .env dans le dossier backend et y inserer ces configurations
 PORT = 5000
 MONGO_URI = mongodb+srv://user1:user1@chatapplication.0359a0h.mongodb.net/?retryWrites=true&w=majority&appName=ChatApplication
 JWT_SECRET=webgenius
-
+### LIEN DE L'PPLICATION EN LIGNE APRES DEPLOIEMENT
+https://swift-chat-0xcw.onrender.com
