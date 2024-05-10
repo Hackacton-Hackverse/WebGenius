@@ -33,7 +33,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd Swift-Chat/Swift-Chat
+  cd Swift-Chat
 ```
 
 Install dependencies
