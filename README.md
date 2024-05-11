@@ -18,7 +18,7 @@ Pour garantir la sécurité des utilisateurs, Swift-Chat stocke les mots de pass
 
 ## COMMENT CA MARCHE ?
 
-[https://Swift-Chat.herokuapp.com/](https://Swift-Chat-7fgq.onrender.com)
+[https://swift-chat-0xcw.onrender.com](https://swift-chat-0xcw.onrender.com)
 
 ![](https://github.com/webgenius-eon/mern-chat-app/blob/master/screenshots/group%20%2B%20notif.PNG)
 
