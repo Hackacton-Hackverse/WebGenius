@@ -15,6 +15,7 @@ import {
 } from "../redux/actions/userAction";
 import { useTheme } from "@emotion/react";
 
+
 const SingleJob = () => {
   const { palette } = useTheme();
   const dispatch = useDispatch();
@@ -41,12 +42,59 @@ const SingleJob = () => {
     );
   };
 
-  const handleChatWithUs = () => {
-    // console.log(user.email);
+  // const handleChatWithUs = () => {
+  //   // console.log(user.email);
 
-    // dispatch2(userProfileAction());
-    navigate("/chats", { state: { user, singleJob } });
-  };
+  //   // dispatch2(userProfileAction());
+  //   navigate("/chats", { state: { user, singleJob } });
+  // };
+
+
+
+  // useEffect(() => {
+  //   const handleChatWithUs = () => {
+  //     window.location.href = "https://swift-chat-0xcw.onrender.com/";
+  //   };
+  
+  //   const chatButton = document.getElementById("chatButton");
+  //   chatButton.addEventListener("click", handleChatWithUs);
+  
+  //   return () => {
+  //     chatButton.removeEventListener("click", handleChatWithUs);
+  //   };
+  // }, []);
+
+
+
+  useEffect(() => {
+    const handleChatWithUs = () => {
+      window.location.href = "https://swift-chat-0xcw.onrender.com/";
+    };
+  
+    const waitForButton = () => {
+      const chatButton = document.getElementById("chatButton");
+      if (chatButton) {
+        chatButton.addEventListener("click", handleChatWithUs);
+      } else {
+        setTimeout(waitForButton, 100); // Réessayer après 100 millisecondes
+      }
+    };
+  
+    waitForButton();
+  
+    return () => {
+      const chatButton = document.getElementById("chatButton");
+      if (chatButton) {
+        chatButton.removeEventListener("click", handleChatWithUs);
+      }
+    };
+  }, []);
+
+
+
+  
+
+
 
   return (
     <>
@@ -104,8 +152,8 @@ const SingleJob = () => {
                   >
                     Apply for this Job
                   </Button>
-                  <Button
-                    onClick={handleChatWithUs}
+                  <Button id="chatButton"
+                    // onClick={handleChatWithUs}
                     sx={{ fontSize: "13px", mt: 2 }}
                     variant="contained"
                   >
