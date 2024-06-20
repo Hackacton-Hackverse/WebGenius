@@ -66,29 +66,13 @@ const SingleJob = () => {
 
 
 
-  useEffect(() => {
-    const handleChatWithUs = () => {
-      window.location.href = "https://swift-chat-0xcw.onrender.com/";
-    };
-  
-    const waitForButton = () => {
-      const chatButton = document.getElementById("chatButton");
-      if (chatButton) {
-        chatButton.addEventListener("click", handleChatWithUs);
-      } else {
-        setTimeout(waitForButton, 100); // Réessayer après 100 millisecondes
-      }
-    };
-  
-    waitForButton();
-  
-    return () => {
-      const chatButton = document.getElementById("chatButton");
-      if (chatButton) {
-        chatButton.removeEventListener("click", handleChatWithUs);
-      }
-    };
-  }, []);
+  const handleChatWithUs = () => {
+    //  const { token } = getTokenValue(); // Utilisez directement le token extrait de req.cookies
+    // console.log(user.email);
+
+    // dispatch2(userProfileAction());
+    window.location.href = "https://swift-chat-0xcw.onrender.com/";
+  };
 
 
 
@@ -152,8 +136,9 @@ const SingleJob = () => {
                   >
                     Apply for this Job
                   </Button>
-                  <Button id="chatButton"
-                    // onClick={handleChatWithUs}
+                  <Button 
+                  //id="chatButton"
+                    onClick={handleChatWithUs}
                     sx={{ fontSize: "13px", mt: 2 }}
                     variant="contained"
                   >
